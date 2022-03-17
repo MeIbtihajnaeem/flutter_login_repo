@@ -38,14 +38,19 @@ dependencies:
   formz:
   equatable:
   top_snackbar_flutter:
+  auto_route: ^3.2.4
   form_inputs:
     path: packages/form_inputs
   auth_repository:
     path: packages/auth_repository
+  option_repository:
+    path: packages/option_repository
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  auto_route_generator: ^3.2.3
+  build_runner: ^2.1.7
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

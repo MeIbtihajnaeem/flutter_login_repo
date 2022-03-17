@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:ms_example/app/bloc/app_auth_bloc.dart';
 import 'package:ms_example/login/cubit/login_cubit.dart';
+import 'package:ms_example/routes/router.gr.dart';
 
 import '../../theme.dart';
 import '../../utils/custom_snakbar.dart';
@@ -22,6 +24,7 @@ class LoginForm extends StatelessWidget {
           }
           if (state.status.isSubmissionSuccess) {
             context.read<AppAuthBloc>().add(TestStatusRequested());
+            AutoRouter.of(context).push(const HomeRoute());
           }
         },
         child: SafeArea(
